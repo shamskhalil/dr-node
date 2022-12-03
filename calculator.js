@@ -10,6 +10,18 @@ class Calculator extends EventEmitter {
         this.emit('addition', a + b);
     }
 
+    subtract(a, b) {
+        this.emit('subtraction', a - b);
+    }
+
+    multiply(a, b) {
+        this.emit('multiplication', a * b);
+    }
+
+    divide(a, b) {
+        this.emit('division', a / b);
+    }
+
     random() {
         setInterval(() => {
             this.emit('random', Math.floor(Math.random() * 10000000));
