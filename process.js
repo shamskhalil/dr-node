@@ -44,6 +44,7 @@ async function askCommand() {
                 console.log('Bye bye!');
                 process.exit(0);
             default:
+                process.stderr.write('\nYour input is not valid, please try again!\n\n')
                 askCommand()
                 break;
         }
